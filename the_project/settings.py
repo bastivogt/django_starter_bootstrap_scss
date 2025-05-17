@@ -40,7 +40,9 @@ INSTALLED_APPS = [
 
 
     "pages",
-    "custom_user"
+    "custom_user",
+    "sevo_user",
+    "template_tags",
 ]
 
 MIDDLEWARE = [
@@ -132,3 +134,8 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # CustomUser
 AUTH_USER_MODEL = "custom_user.CustomUser"
+
+
+
+# SEVO USER
+SEVO_USER_SIGN_IN_REDIRECT_URL = "pages:index"

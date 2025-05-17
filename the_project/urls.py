@@ -21,6 +21,7 @@ from django.views.generic.base import RedirectView
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("user/", include("sevo_user.urls")),
     
     path("", RedirectView.as_view(pattern_name="pages:index"), name="index"),
     path("page/", include("pages.urls"))
