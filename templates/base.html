@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static "images/icons/favicon.svg" %}" sizes="any" type="image/svg+xml">
+    <link rel="stylesheet" href="{% static "bootstrap/css/bootstrap.css" %}">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    {% block custom_css %}{% endblock %}
+    <script src="{% static "bootstrap/js/bootstrap.bundle.min.js" %}"></script>
+    <script src="{% static "js/app.js" %}" defer></script>
+    {% block custom_js %}{% endblock %}
+    <title>Starter Bootstrap SCSS - {% block title %}{% endblock %}</title>
+</head>
+<body>
+    {% include "includes/navbar.inc.html" %}
+    {% for message in messages %}
+        <div class="alert alert-{{ message.tags }} alert-dismissible fade show m-0 rounded-0 message-alert" role="alert">
+            <strong>{{ message }}</strong>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    {% endfor %}
+    
+    <main class="container content">
+
+        <div class="py-5">
+            {% block content %}{% endblock %}
+        </div>
+    </main>
+    {% include "includes/footer.inc.html" %}
+</body>
+</html>

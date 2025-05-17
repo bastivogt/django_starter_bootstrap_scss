@@ -1,0 +1,19 @@
+{
+  "name": "starter_bootstrap_scss",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass:build": "sass static/bootstrap/scss:static/bootstrap/css --no-source-map",
+    "sass:watch": "sass static/bootstrap/scss:static/bootstrap/css --no-source-map --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "bootstrap": "^5.3.6",
+    "sass": "^1.89.0"
+  }
+}
